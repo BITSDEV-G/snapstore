@@ -59,14 +59,20 @@ class Login(Resource):
     @accounts_ns.response(200, 'Login successful')
     @accounts_ns.response(401, 'Invalid credentials')
     def post(self):
-        """Login and receive an access token"""
         data = request.get_json()
-        user = User.query.filter_by(email=data['email']).first()
-        if user and user.check_password(data['password']):
-            access_token = create_access_token(identity=user.id)
-            return jsonify(access_token=access_token), 200
-        return jsonify({"message": "Invalid credentials"}), 401
+        email = data.get('email')
+        password = data.get('password')
 
+        user = User.query.filter_by(email=email).first()
+        if user and user.check_password(password):
+            access_token = create_access_token(identity=user.id)
+            return {
+                'message': 'Login successful',
+                'access_token': access_token,
+                'user': user_schema.dump(user)
+            }, 200
+        else:
+            return {'message': 'Invalid email or password'}, 401
 # Profile Route (GET & PUT)
 @accounts_ns.route('/profile')
 class Profile(Resource):
