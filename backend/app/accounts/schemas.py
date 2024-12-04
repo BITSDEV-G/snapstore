@@ -30,4 +30,4 @@ class UserUpdateSchema(Schema):
     email = fields.Email(validate=validate.Length(min=1, max=100))
     bio = fields.Str(validate=validate.Length(min=0, max=500))
     profile_picture = fields.Str(validate=validate.Length(min=0, max=200))
-    password = fields.Str(validate=validate.Length(min=6))
+    password = fields.Str(validate=validate.Length(min=6), required=False)
