@@ -65,7 +65,7 @@ class Login(Resource):
 
         user = User.query.filter_by(email=email).first()
         if user and user.check_password(password):
-            access_token = create_access_token(identity=user.id)
+            access_token = create_access_token(identity=str(user.id))
             return {
                 'message': 'Login successful',
                 'access_token': access_token,
@@ -73,6 +73,7 @@ class Login(Resource):
             }, 200
         else:
             return {'message': 'Invalid email or password'}, 401
+
 # Profile Route (GET & PUT)
 @accounts_ns.route('/profile')
 class Profile(Resource):
@@ -157,9 +158,8 @@ class TokenRefresh(Resource):
     def post(self):
         """Refresh the access token"""
         user_id = get_jwt_identity()
-        new_token = create_access_token(identity=user_id)
+        new_token = create_access_token(identity=str(user_id))
         return jsonify(access_token=new_token), 200
-
 # Protected Route
 @accounts_ns.route('/protected')
 class Protected(Resource):
