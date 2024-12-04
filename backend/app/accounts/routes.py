@@ -1,4 +1,4 @@
-from flask import request, jsonify, make_response
+from flask import request, jsonify
 from flask_restx import Namespace, Resource, fields
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from .models import User, db
@@ -76,36 +76,62 @@ class Login(Resource):
 
 # Profile Route (GET & PUT)
 @accounts_ns.route('/profile')
-class Profile(Resource):
+class UserProfile(Resource):
+
     @jwt_required()
     @accounts_ns.response(200, 'Profile retrieved successfully')
+    @accounts_ns.response(404, 'User not found')
     def get(self):
-        """Get the current user's profile"""
+        """Get the profile of the logged-in user"""
         user_id = get_jwt_identity()
-        user = User.query.get_or_404(user_id)
+        try:
+            # Fetch user from the database by ID
+            user = User.query.get(user_id)
+            if not user:
+                return jsonify({"msg": "User not found"}), 404
+        except Exception as e:
+            # If any error occurs during the database query, return an error message
+            return jsonify({"msg": f"Error loading the user {user_id}: {str(e)}"}), 500
+        # Return the user data if found
         return jsonify(user_schema.dump(user)), 200
 
     @jwt_required()
-    @accounts_ns.expect(user_model)
     @accounts_ns.response(200, 'Profile updated successfully')
     @accounts_ns.response(400, 'Validation Error')
     def put(self):
         """Update the current user's profile"""
         user_id = get_jwt_identity()
-        user = User.query.get_or_404(user_id)
+        try:
+            # Fetch user from the database by ID or return 404 if not found
+            user = User.query.get_or_404(user_id)
+        except Exception as e:
+            return jsonify({"msg": f"Error loading the user {user_id}: {str(e)}"}), 500
+
+        # Get the data from the request body
         data = request.get_json()
+
+        # Validate the incoming data using the user_update_schema
         errors = user_update_schema.validate(data)
         if errors:
             return jsonify(errors), 400
 
-        # Update the user data
+        # Update the user data with the new values
         for field in ['username', 'email', 'bio', 'profile_picture']:
             if field in data:
                 setattr(user, field, data[field])
+
+        # If password is provided, update it as well
         if 'password' in data:
             user.set_password(data['password'])
 
-        db.session.commit()
+        # Save the updated user to the database
+        try:
+            db.session.commit()
+        except Exception as e:
+            db.session.rollback()
+            return jsonify({"msg": f"Error saving changes: {str(e)}"}), 500
+
+        # Return the updated user data
         return jsonify(user_schema.dump(user)), 200
 
 # Users List Route (GET)
