@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Auth.module.css';
+import appleLogo from '../assets/apple.png';
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -16,8 +17,8 @@ const Auth = () => {
     <div className={styles.authContainer}>
       <div className={styles.overlay} />
       <div className={styles.content}>
-        <img src="/snapstore-logo.png" alt="SnapStore Logo" className={styles.logo} />
-        <h1 className={styles.title}>{isLogin ? 'Welcome back' : 'Create an account'}</h1>
+      <img src={appleLogo} alt="SnapStore Logo" className={styles.logo} />
+      <h1 className={styles.title}>{isLogin ? 'Welcome back' : 'Create an account'}</h1>
         <form className={styles.form} onSubmit={handleSubmit}>
           {!isLogin && (
             <div className={styles.inputGroup}>
@@ -111,4 +112,3 @@ const Auth = () => {
 };
 
 export default Auth;
-// No additional code needed at this placeholder

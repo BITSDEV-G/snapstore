@@ -38,38 +38,39 @@ export default function Navbar() {
               SNAPSTORE
             </Link>
           </div>
+            <div className="flex-shrink-0"></div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) =>
-              item.isScroll ? (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  smooth={true}
-                  duration={500}
-                  offset={-80} // Adjust for navbar height
-                  className="text-xs text-gray-300 hover:text-amber-400 px-3 py-2 transition-colors duration-200 cursor-pointer"
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="text-xs text-gray-300 hover:text-amber-400 px-3 py-2 transition-colors duration-200"
-                >
-                  {item.name}
-                </Link>
-              )
-            )}
+        {navItems.map((item) =>
+          item.isScroll ? (
             <Link
-              to="/login"
-              className="ml-4 px-4 py-2 text-xs text-amber-400 border border-amber-400 hover:bg-amber-400 hover:text-black transition-all duration-200"
+              key={item.name}
+              to={item.path}
+              smooth={true}
+              duration={500}
+              offset={-80} // Adjust for navbar height
+              className="text-xs text-gray-300 hover:text-amber-400 px-3 py-2 transition-colors duration-200 cursor-pointer"
             >
-              TRY NOW FOR FREE
+              {item.name}
             </Link>
-          </div>
+          ) : (
+            <Link
+              key={item.name}
+              to={item.path}
+              className="text-xs text-gray-300 hover:text-amber-400 px-3 py-2 transition-colors duration-200"
+            >
+              {item.name}
+            </Link>
+          )
+        )}
+        <Link
+          to="/login"
+          className="ml-4 px-4 py-2 text-xs text-amber-400 border border-amber-400 hover:bg-amber-400 hover:text-black transition-all duration-200"
+        >
+          TRY NOW FOR FREE
+        </Link>
+      </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
