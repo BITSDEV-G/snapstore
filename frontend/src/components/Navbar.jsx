@@ -15,14 +15,13 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { name: 'HOME', path: '/' },
-    { name: 'ABOUT US', path: '/about' },
-    { name: 'NEWS', path: '/news' },
-    { name: 'GALLERY', path: '/gallery' },
-    { name: 'BLOG', path: '/blog' },
-    { name: 'CONTACTS', path: '/contacts' },
+    { name: 'HOME', path: '/', isScroll: false },
+    { name: 'ABOUT US', path: 'about-us', isScroll: true },
+    { name: 'NEWS', path: '/news', isScroll: false },
+    { name: 'GALLERY', path: '/gallery', isScroll: false },
+    { name: 'BLOG', path: '/blog', isScroll: false },
+    { name: 'CONTACTS', path: '/contacts', isScroll: false },
   ];
-
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -42,15 +41,28 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-xs text-gray-300 hover:text-amber-400 px-3 py-2 transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) =>
+              item.isScroll ? (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  smooth={true}
+                  duration={500}
+                  offset={-80} // Adjust for navbar height
+                  className="text-xs text-gray-300 hover:text-amber-400 px-3 py-2 transition-colors duration-200 cursor-pointer"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="text-xs text-gray-300 hover:text-amber-400 px-3 py-2 transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
             <Link
               to="/login"
               className="ml-4 px-4 py-2 text-xs text-amber-400 border border-amber-400 hover:bg-amber-400 hover:text-black transition-all duration-200"
