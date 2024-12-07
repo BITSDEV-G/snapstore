@@ -3,7 +3,7 @@ import { useSpring, animated, config } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
 
 const AboutUsSection = styled.section`
-  background-color: #0a0a0a;
+background: linear-gradient(to bottom, #000000, #0a0a0a, #1a1a1a);
   padding: 120px 0;
   overflow: hidden;
 `;

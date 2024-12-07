@@ -1,0 +1,124 @@
+.blogContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.blogTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.categoryFilter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.categoryButton {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.categoryButton:hover {
+  background-color: #e0e0e0;
+}
+
+.categoryButton.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.blogPosts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.blogPost {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.blogPost:hover {
+  transform: translateY(-5px);
+}
+
+.postTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.postMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.postExcerpt {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.readMoreButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.readMoreButton:hover {
+  background-color: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.paginationButton {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.paginationButton:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .blogPosts {
+    grid-template-columns: 1fr;
+  }
+
+  .categoryFilter {
+    flex-wrap: wrap;
+  }
+
+  .categoryButton {
+    margin-bottom: 0.5rem;
+  }
+}
+
