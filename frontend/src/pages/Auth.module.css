@@ -33,16 +33,17 @@
   width: 80px;
   height: 80px;
   margin: 0 auto 2rem;
+  text-align: center;
   display: block;
 }
 
 .title {
-  font-family: 'SF Pro Display', sans-serif;
-  font-size: 3rem;
+  font-family: 'SF Pro Display', sans-serif ;
+  font-size: 2rem;
   color: #ffc107;
   text-align: center;
-  margin-bottom: 2rem;
-  font-weight: 300;
+  margin-bottom:2rem;
+  font-weight: 500;
 }
 
 .form {
@@ -146,8 +147,8 @@
 }
 
 .socialIcon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 0.5rem;
 }
 
@@ -173,6 +174,19 @@
 .toggleLink:hover {
   color: #ffca28;
 }
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 0.875rem;
+}
+
+.footer a {
+  color: #ffc107;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
 
 @media (max-width: 480px) {
   .content {
@@ -187,4 +201,3 @@
     grid-template-columns: 1fr;
   }
 }
-
