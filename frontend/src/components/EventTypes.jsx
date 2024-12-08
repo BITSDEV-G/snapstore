@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { useSpring, useTrail, animated, config } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
-import { FaHeart, FaBuilding, FaGraduationCap, FaBirthdayCake, FaCamera, FaTree, FaMusic, FaUtensils, FaStar, FaPalette } from 'react-icons/fa';
+import { FaHeart, FaBuilding, FaGraduationCap, FaBirthdayCake, FaCamera, FaTree, FaStar, FaPalette } from 'react-icons/fa';
 
 const Section = styled.section`
-  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  background: linear-gradient(to bottom, #000000, #000000, #000000);
   padding: 120px 0;
   overflow: hidden;
 `;
@@ -115,8 +115,7 @@ const eventTypes = [
   { name: "Birthdays", icon: FaBirthdayCake },
   { name: "Portrait Sessions", icon: FaCamera },
   { name: "Outdoor & Nature", icon: FaTree },
-  { name: "Concerts", icon: FaMusic },
-  { name: "Food Photography", icon: FaUtensils },
+  // Removed "Concerts" and "Food Photography"
   { name: "Fashion Shows", icon: FaStar },
   { name: "Art Exhibitions", icon: FaPalette },
 ];
