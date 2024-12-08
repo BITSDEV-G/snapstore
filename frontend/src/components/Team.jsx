@@ -100,8 +100,8 @@ const SocialLink = styled.a`
 const teamMembers = [
   {
     name: "Emma Thompson",
-    role: "Lead Photographer",
-    bio: "With over a decade of experience, Emma specializes in landscape and wildlife photography.",
+    role: "Founder & CEO",
+    bio: "With over a decade of experience in event photography, Emma founded SnapStore to revolutionize how clients connect with photographers.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
@@ -109,8 +109,8 @@ const teamMembers = [
   },
   {
     name: "Alex Chen",
-    role: "Creative Director",
-    bio: "Alex brings a unique perspective to our team, blending traditional and digital art forms.",
+    role: "CTO",
+    bio: "Alex's expertise in software development and passion for photography drive SnapStore's innovative technology solutions.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
@@ -118,8 +118,8 @@ const teamMembers = [
   },
   {
     name: "Sarah Johnson",
-    role: "UI/UX Designer",
-    bio: "Sarah's passion for user-centric design helps create intuitive and beautiful interfaces.",
+    role: "Head of User Experience",
+    bio: "Sarah's background in both photography and UX design helps create an intuitive platform for photographers and clients alike.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
@@ -127,15 +127,14 @@ const teamMembers = [
   },
   {
     name: "Michael Lee",
-    role: "Full Stack Developer",
-    bio: "Michael's expertise in both front-end and back-end technologies drives our platform forward.",
+    role: "Head of Marketing",
+    bio: "Michael's experience in digital marketing and event management helps SnapStore connect with both photographers and event planners effectively.",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com"
   }
 ];
-
 const TeamMember = ({ name, role, bio, image, github, linkedin, twitter }) => {
   const [ref, inView] = useInView({
     threshold: 0.1,

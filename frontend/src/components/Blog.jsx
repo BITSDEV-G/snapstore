@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useMemo } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
@@ -112,15 +112,17 @@ const ReadMore = styled.a`
   }
 `;
 
-const LazyBlogImage = ({ src }) => (
+const LazyBlogImage = memo(({ src }) => (
   <LazyLoad height={300} offset={100}>
     <BlogImage style={{ backgroundImage: `url(${src})` }} />
   </LazyLoad>
-);
+));
 
 LazyBlogImage.propTypes = {
   src: PropTypes.string.isRequired,
 };
+
+LazyBlogImage.displayName = 'LazyBlogImage';
 
 const BlogPost = memo(({ title, excerpt, image, date, author }) => {
   const [ref, inView] = useInView({
@@ -170,22 +172,22 @@ BlogPost.propTypes = {
 
 const blogPosts = [
   {
-    title: 'Mastering Low Light Photography',
-    excerpt: 'Discover techniques to capture stunning images in challenging low light conditions, from cityscapes to astrophotography.',
+    title: 'Mastering Event Photography: Tips for Capturing Memorable Moments',
+    excerpt: 'Learn essential techniques for capturing stunning images at various events, from weddings to corporate gatherings.',
     image: 'https://images.pexels.com/photos/1804169/pexels-photo-1804169.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'May 15, 2023',
     author: 'Jane Doe',
   },
   {
-    title: 'The Art of Composition in Landscape Photography',
-    excerpt: 'Learn the fundamental principles of composition to create visually striking landscape photographs that captivate viewers.',
+    title: 'The Art of Composition in Portrait Photography',
+    excerpt: 'Discover key principles of composition to create captivating and professional portraits that tell a story.',
     image: 'https://images.pexels.com/photos/2858669/pexels-photo-2858669.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'May 10, 2023',
     author: 'John Smith',
   },
   {
-    title: 'Capturing the Soul of Street Photography',
-    excerpt: 'Tips and tricks for capturing authentic moments in urban environments, telling stories through your lens.',
+    title: 'Building Your Photography Business: Insights from Successful Pros',
+    excerpt: 'Get valuable advice and strategies from experienced photographers on how to grow your photography business.',
     image: 'https://images.pexels.com/photos/14041407/pexels-photo-14041407.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'May 5, 2023',
     author: 'Alice Johnson',
@@ -204,20 +206,25 @@ const Blog = () => {
     config: { mass: 1, tension: 90, friction: 10 },
   });
 
+  const memoizedBlogPosts = useMemo(() =>
+    blogPosts.map((post, index) => (
+      <BlogPost key={index} {...post} />
+    )),
+    []
+  );
+
   return (
     <Section>
       <Container>
         <Title ref={ref} style={titleSpring}>
-          Latest from Our Blog
+          SnapStore Photography Insights
         </Title>
         <Grid>
-          {blogPosts.map((post, index) => (
-            <BlogPost key={index} {...post} />
-          ))}
+          {memoizedBlogPosts}
         </Grid>
       </Container>
     </Section>
   );
 };
 
-export default Blog;
+export default memo(Blog);

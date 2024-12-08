@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
-import { Camera, User, Folder, Shield, Image, Globe } from 'react-feather';
+import { Search, Calendar, MessageCircle, Star, DollarSign, Briefcase } from 'react-feather';
 import PropTypes from 'prop-types';
 
 const Section = styled.section`
@@ -73,34 +73,34 @@ const FeatureDescription = styled.p`
 
 const features = [
   {
-    title: "High-Quality Photos",
-    description: "Access our vast collection of professional, high-resolution photographs that capture moments in stunning detail.",
-    icon: Camera
+    title: "Easy Photographer Search",
+    description: "Find the perfect photographer for your event using our advanced search filters, including location, event type, and budget.",
+    icon: Search
   },
   {
-    title: "User Profiles",
-    description: "Create and customize your profile to showcase your photography style, interests, and portfolio to the community.",
-    icon: User
+    title: "Seamless Booking",
+    description: "Book your chosen photographer with ease, manage event details, and make secure payments all in one place.",
+    icon: Calendar
   },
   {
-    title: "Smart Categories",
-    description: "Effortlessly navigate through our intelligently organized categories to find the perfect photo for any project or inspiration.",
-    icon: Folder
+    title: "Direct Communication",
+    description: "Use our in-platform chat to discuss event specifics and ensure clear communication with your photographer.",
+    icon: MessageCircle
   },
   {
-    title: "Secure Transactions",
-    description: "Shop with confidence using our state-of-the-art, encrypted payment processing system for worry-free purchases.",
-    icon: Shield
+    title: "Ratings and Reviews",
+    description: "Make informed decisions based on genuine client feedback and ratings from previous events.",
+    icon: Star
   },
   {
-    title: "Creative Filters",
-    description: "Enhance your photographs with our library of creative filters that add depth, mood, and vibrance to your images.",
-    icon: Image
+    title: "Secure Payments",
+    description: "Enjoy peace of mind with our integrated, secure payment system, including milestone payment options.",
+    icon: DollarSign
   },
   {
-    title: "Global Community",
-    description: "Connect with photographers and enthusiasts worldwide to share your passion and collaborate on exciting projects.",
-    icon: Globe
+    title: "Grow Your Business",
+    description: "Photographers can showcase their work, manage bookings, and expand their client base effortlessly.",
+    icon: Briefcase
   }
 ];
 
@@ -171,16 +171,21 @@ const Features = () => {
     }
   }, [inView, renderedFeatures.length, renderNextFeature]);
 
+  const memoizedFeatures = useMemo(() =>
+    renderedFeatures.map((feature, index) => (
+      <Feature key={index} {...feature} index={index} />
+    )),
+    [renderedFeatures]
+  );
+
   return (
     <Section>
       <Container>
         <Title ref={ref} style={titleSpring}>
-          Elevate Your Photography Experience
+          Simplify Your Event Photography
         </Title>
         <Grid>
-          {renderedFeatures.map((feature, index) => (
-            <Feature key={index} {...feature} index={index} />
-          ))}
+          {memoizedFeatures}
         </Grid>
       </Container>
     </Section>

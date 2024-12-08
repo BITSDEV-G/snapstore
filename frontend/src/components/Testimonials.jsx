@@ -98,34 +98,35 @@ const Star = styled(FaStar)`
 
 const testimonials = [
   {
-    text: "SnapStore has revolutionized the way I manage and sell my photography. The platform is intuitive, and the community is incredibly supportive.",
+    text: "SnapStore has transformed how I find photographers for my events. The platform is user-friendly, and the quality of professionals is outstanding.",
     author: "Emily Rodriguez",
-    title: "Professional Photographer",
+    title: "Event Planner",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
     rating: 5
   },
   {
-    text: "As an amateur photographer, SnapStore has given me the confidence to showcase my work. The feedback and exposure I've received are invaluable.",
+    text: "As a wedding photographer, SnapStore has helped me grow my business significantly. The booking process is seamless, and I love the direct communication with clients.",
     author: "Michael Chang",
-    title: "Hobbyist Photographer",
+    title: "Professional Photographer",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
-    rating: 4
+    rating: 5
   },
   {
-    text: "The quality of photographs on SnapStore is unparalleled. It's my go-to platform for finding unique, high-resolution images for my design projects.",
+    text: "Finding the perfect photographer for my corporate events has never been easier. SnapStore's search filters and portfolio previews are incredibly helpful.",
     author: "Sarah Thompson",
-    title: "Graphic Designer",
+    title: "Corporate Event Manager",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
     rating: 5
   },
   {
-    text: "SnapStore's user interface is sleek and easy to navigate. It's a pleasure to use, whether I'm uploading my own photos or browsing others' work.",
+    text: "The secure payment system and clear communication channels on SnapStore give me peace of mind when booking photographers for my clients' events.",
     author: "David Lee",
-    title: "UI/UX Designer",
+    title: "Luxury Event Coordinator",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
     rating: 5
   }
 ];
+
 
 const Testimonial = ({ text, author, title, image, rating }) => {
   return (

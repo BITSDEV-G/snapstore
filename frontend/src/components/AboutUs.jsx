@@ -164,32 +164,32 @@ const AboutUs = () => {
   return (
     <AboutUsSection ref={ref}>
       <Container>
-        <Title style={titleSpring}>Discover Our Story</Title>
+        <Title style={titleSpring}>Discover Snapstore</Title>
         <Content>
           <ImageWrapper style={imageSpring}>
             <Image
               src="https://images.pexels.com/photos/3928550/pexels-photo-3928550.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Professional photographer in action"
+              alt="Professional photographer working with a client"
               onLoad={() => setIsLoaded(true)}
             />
           </ImageWrapper>
           <TextContent style={textSpring}>
             {paragraphs.includes(0) && (
               <Paragraph style={paragraphSpring}>
-                At <Highlight>SnapStore</Highlight>, we believe that every moment is a masterpiece waiting to be captured. Founded in 2010 by a group of passionate photographers, we&apos;ve grown from a small studio into a global community of visual storytellers.
+                At <Highlight>Snapstore</Highlight>, we believe that every event deserves to be captured perfectly. Founded by a team of passionate photographers and tech enthusiasts, we&apos;ve created a platform that revolutionizes how clients connect with professional photographers.
               </Paragraph>
             )}
             {paragraphs.includes(1) && (
               <Paragraph style={paragraphSpring}>
-                Our mission is to <Highlight>empower creators</Highlight> by providing a platform where photography transcends mere images and becomes an art form that speaks to the soul. We curate only the finest high-quality photographs, ensuring that each image in our collection tells a unique story.
+                Our mission is to <Highlight>simplify event photography</Highlight> by providing a seamless experience for both clients and photographers. From weddings to corporate events, Snapstore ensures that finding and booking the right photographer is stress-free and efficient.
               </Paragraph>
             )}
             {paragraphs.includes(2) && (
               <Paragraph style={paragraphSpring}>
-                With a team of <Highlight>award-winning photographers</Highlight> and state-of-the-art technology, we&apos;re not just capturing moments; we&apos;re preserving emotions, freezing time, and creating legacies. Join us in our journey to make the world a more beautiful place, one snapshot at a time.
+                With <Highlight>cutting-edge technology</Highlight> and a user-friendly interface, we&apos;re not just connecting people; we&apos;re creating opportunities, preserving memories, and elevating the art of event photography. Join us in our journey to make professional photography accessible to everyone, one event at a time.
               </Paragraph>
             )}
-            <Button style={buttonSpring}>Learn More About Us</Button>
+            <Button style={buttonSpring}>Explore Snapstore</Button>
           </TextContent>
         </Content>
       </Container>
