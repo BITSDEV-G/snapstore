@@ -64,7 +64,7 @@ export default function Navbar() {
           )
         )}
         <Link
-          to="/login"
+          to="/role-selection"
           className="ml-4 px-4 py-2 text-xs text-amber-400 border border-amber-400 hover:bg-amber-400 hover:text-black transition-all duration-200"
         >
           TRY NOW FOR FREE
