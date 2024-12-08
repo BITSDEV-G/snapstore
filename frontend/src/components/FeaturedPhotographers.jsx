@@ -73,25 +73,25 @@ const featuredPhotographers = [
   {
     name: "Emma Thompson",
     specialty: "Wedding Photography",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
+    image: "https://media.istockphoto.com/id/1335978911/photo/professional-photographer-at-the-studio-african-american-man-wear-black-hoodie-and-sunglasses.jpg?s=612x612&w=0&k=20&c=TOw_kaFbzKWdn6a4TV3DtBe1Cdxygo3fsqn3dG269XI=",
     rating: 4.9
   },
   {
     name: "Alex Chen",
     specialty: "Portrait Photography",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgSYQ-QYCMUMuQNF8wz717Q0s7FrOC7shGwg&s",
     rating: 4.8
   },
   {
     name: "Sarah Johnson",
     specialty: "Event Photography",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpK8EZnZBbne1yLMpg6fncebDRajmcLsUVzw&s",
     rating: 4.7
   },
   {
     name: "Michael Lee",
     specialty: "Landscape Photography",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
+    image: "https://media.istockphoto.com/id/600057474/photo/studio-portrait-of-male-photographer-with-camera.jpg?s=612x612&w=0&k=20&c=V3zCNV0kRpOi8yQFw4oH8471FNR4q6vyWLzvuDf-hac=",
     rating: 4.9
   }
 ];

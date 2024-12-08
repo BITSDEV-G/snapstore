@@ -174,14 +174,14 @@ const blogPosts = [
   {
     title: 'Mastering Event Photography: Tips for Capturing Memorable Moments',
     excerpt: 'Learn essential techniques for capturing stunning images at various events, from weddings to corporate gatherings.',
-    image: 'https://images.pexels.com/photos/1804169/pexels-photo-1804169.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: 'https://images.squarespace-cdn.com/content/v1/5534a426e4b0ed810ce8f891/1492287905480-JQRSKAM72J70H3QVF2RM/image-asset.jpeg',
     date: 'May 15, 2023',
     author: 'Jane Doe',
   },
   {
     title: 'The Art of Composition in Portrait Photography',
     excerpt: 'Discover key principles of composition to create captivating and professional portraits that tell a story.',
-    image: 'https://images.pexels.com/photos/2858669/pexels-photo-2858669.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: 'https://media.cnn.com/api/v1/images/stellar/prod/190227163728-african-photographers-lakin.jpg?q=w_2187,h_1458,x_0,y_0,c_fill',
     date: 'May 10, 2023',
     author: 'John Smith',
   },

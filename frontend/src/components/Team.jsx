@@ -102,7 +102,7 @@ const teamMembers = [
     name: "Emma Thompson",
     role: "Founder & CEO",
     bio: "With over a decade of experience in event photography, Emma founded SnapStore to revolutionize how clients connect with photographers.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
+    image: "https://www.capitalfm.co.ke/thesauce/files/2019/05/man-in-suit-professionals.jpg",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com"
@@ -111,7 +111,7 @@ const teamMembers = [
     name: "Alex Chen",
     role: "CTO",
     bio: "Alex's expertise in software development and passion for photography drive SnapStore's innovative technology solutions.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
+    image: "https://photoai.com/cdn-cgi/image/format=jpeg,fit=cover,width=1024,height=1536,quality=85/https://r2-us-west.photoai.com/1726204507-41c93c794ee27f57a83004455c8b6482-2.png",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com"
@@ -120,7 +120,7 @@ const teamMembers = [
     name: "Sarah Johnson",
     role: "Head of User Experience",
     bio: "Sarah's background in both photography and UX design helps create an intuitive platform for photographers and clients alike.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&q=80",
+    image: "https://s3.envato.com/files/482150861/656640680e26b47183a6de13_withmeta.jpg",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com"
