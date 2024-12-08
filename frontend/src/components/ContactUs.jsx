@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 
 const Section = styled.section`
-background: linear-gradient(to bottom, #000000, #0a0a0a, #1a1a1a);
+  background: linear-gradient(to bottom, #000000, #000000, #000000);
   padding: 100px 0;
   color: #ffffff;
 `;

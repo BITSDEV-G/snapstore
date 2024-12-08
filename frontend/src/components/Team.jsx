@@ -5,7 +5,7 @@ import { GitHub, Linkedin, Twitter } from 'react-feather';
 import PropTypes from 'prop-types';
 
 const Section = styled.section`
-background: linear-gradient(to bottom, #000000, #0a0a0a, #1a1a1a);
+  background: linear-gradient(to bottom, #000000, #000000, #000000);
   padding: 100px 0;
   perspective: 1000px;
 `;

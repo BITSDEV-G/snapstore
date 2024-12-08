@@ -7,7 +7,7 @@ import { Calendar, User, ArrowRight } from 'react-feather';
 import PropTypes from 'prop-types';
 
 const Section = styled.section`
-background: linear-gradient(to bottom, #000000, #0a0a0a, #1a1a1a);
+  background: linear-gradient(to bottom, #000000, #000000, #000000);
   padding: 100px 0;
   perspective: 1000px;
 `;
@@ -172,21 +172,21 @@ const blogPosts = [
   {
     title: 'Mastering Low Light Photography',
     excerpt: 'Discover techniques to capture stunning images in challenging low light conditions, from cityscapes to astrophotography.',
-    image: 'https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?crop=entropy&cs=tinysrgb&w=1200&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/1804169/pexels-photo-1804169.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'May 15, 2023',
     author: 'Jane Doe',
   },
   {
     title: 'The Art of Composition in Landscape Photography',
     excerpt: 'Learn the fundamental principles of composition to create visually striking landscape photographs that captivate viewers.',
-    image: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?crop=entropy&cs=tinysrgb&w=1200&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/2858669/pexels-photo-2858669.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'May 10, 2023',
     author: 'John Smith',
   },
   {
     title: 'Capturing the Soul of Street Photography',
     excerpt: 'Tips and tricks for capturing authentic moments in urban environments, telling stories through your lens.',
-    image: 'https://images.unsplash.com/photo-1531219572328-a0171b4448a3?crop=entropy&cs=tinysrgb&w=1200&h=300&fit=crop',
+    image: 'https://images.pexels.com/photos/14041407/pexels-photo-14041407.jpeg?auto=compress&cs=tinysrgb&w=600',
     date: 'May 5, 2023',
     author: 'Alice Johnson',
   },
