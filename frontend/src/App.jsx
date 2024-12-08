@@ -5,7 +5,6 @@ import Blog from './components/Blog';
 import RoleSelection from './components/RoleSelection';
 import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy'; // Ensure this path is correct
-
 export default function App() {
   return (
     <Router>
