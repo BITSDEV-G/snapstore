@@ -47,7 +47,6 @@ export default function Navbar() {
             <Link
               key={item.name}
               to={item.path}
-              smooth={true}
               duration={500}
               offset={-80} // Adjust for navbar height
               className="text-xs text-gray-300 hover:text-amber-400 px-3 py-2 transition-colors duration-200 cursor-pointer"

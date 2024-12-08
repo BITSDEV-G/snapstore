@@ -159,16 +159,21 @@ const Chatbot = () => {
 
   const getBotResponse = (userInput) => {
     const lowerInput = userInput.toLowerCase();
-    if (lowerInput.includes('pricing') || lowerInput.includes('cost')) {
+
+    if (lowerInput.includes('hello') || lowerInput.includes('hi')) {
+      return "Hello there! 👋 Thanks for reaching out to SnapStore. We're here to connect you with amazing photographers and services.";
+    } else if (lowerInput.includes('pricing') || lowerInput.includes('cost')) {
       return "Our pricing varies depending on the type of event and photographer. You can find detailed pricing information on our 'Pricing' page or by contacting a specific photographer.";
     } else if (lowerInput.includes('book') || lowerInput.includes('reservation')) {
       return "To book a photographer, simply browse our listings, select a photographer you like, and use the 'Book Now' button on their profile. You'll be guided through the booking process step by step.";
     } else if (lowerInput.includes('photographer') || lowerInput.includes('photography')) {
       return "We have a wide range of talented photographers specializing in various types of events such as weddings, corporate events, portraits, and more. You can explore their portfolios on our website.";
     } else {
-      return "I'm sorry, I didn't quite understand that. Could you please rephrase your question or ask about our services, booking process, or photographer information?";
+      // Default response
+      return "Hi! 👋 The SnapStore team is working hard to enhance my features and capabilities. Soon, I'll be able to provide you with all the help and support you need for our services. Thanks for your understanding and patience! 😊";
     }
   };
+
 
   return (
     <>
