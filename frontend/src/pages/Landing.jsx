@@ -42,7 +42,7 @@ export default function Landing() {
         title="Ready to Find Your Perfect Photographer?"
         subtitle="Join SnapStore today and connect with talented photographers for your next event."
         buttonText="Get Started"
-        buttonLink="/signup"
+        buttonLink="/role-selection"
       />
       <Element name="about-us" id="about-us">
         <AboutUs />
@@ -63,13 +63,13 @@ export default function Landing() {
         title="Become a SnapStore Photographer"
         subtitle="Showcase your talent and grow your photography business with SnapStore."
         buttonText="Join as Photographer"
-        buttonLink="/photographer-signup"
+        buttonLink="/role-selection"
       />
       <Element name="contact-us" id="contact-us">
         <ContactUs />
       </Element>
       <Footer />
-      <Chatbot />
+      <Chatbot websiteUrl="https://yourwebsite.com" />
     </div>
   );
 }

@@ -33,8 +33,8 @@ const CTAButton = styled(animated.a)`
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #ffc107;
-  background-color: #ffffff;
+  color: #000000;
+  background-color: #ffc107;
   padding: 15px 30px;
   border-radius: 30px;
   text-decoration: none;
@@ -84,6 +84,7 @@ const CTASection = ({ title, subtitle, buttonText, buttonLink }) => {
     </Section>
   );
 };
+
 CTASection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,

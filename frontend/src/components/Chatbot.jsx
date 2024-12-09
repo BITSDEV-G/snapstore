@@ -61,13 +61,13 @@ const Message = styled.div`
   padding: 15px;
   border-radius: 10px;
   max-width: 80%;
-  background: ${props => props.isBot ? 'linear-gradient(135deg, #ff7043, #ff5722)' : '#ffc107'};
-  color: ${props => props.isBot ? '#fff' : '#000'};
+  background: ${props => props.$isBot ? 'linear-gradient(135deg, #ff7043, #ff5722)' : '#ffc107'};
+  color: ${props => props.$isBot ? '#fff' : '#000'};
   font-size: 16px;
   line-height: 1.5;
-  align-self: ${props => props.isBot ? 'flex-start' : 'flex-end'};
-  box-shadow: ${props => props.isBot ? '0 4px 6px rgba(0, 0, 0, 0.2)' : '0 4px 6px rgba(0, 0, 0, 0.1)'};
-  border: ${props => props.isBot ? 'none' : '1px solid #ffca28'};
+  align-self: ${props => props.$isBot ? 'flex-start' : 'flex-end'};
+  box-shadow: ${props => props.$isBot ? '0 4px 6px rgba(0, 0, 0, 0.2)' : '0 4px 6px rgba(0, 0, 0, 0.1)'};
+  border: ${props => props.$isBot ? 'none' : '1px solid #ffca28'};
 `;
 
 const ChatInput = styled.div`
@@ -245,12 +245,12 @@ const Chatbot = () => {
         </ChatHeader>
         <ChatMessages>
           {messages.map((message, index) => (
-            <Message key={index} isBot={message.isBot}>
+            <Message key={index} $isBot={message.isBot}>
               {message.text}
             </Message>
           ))}
           {isTyping && (
-            <Message isBot={true}>
+            <Message $isBot={true}>
               <TypingEffect text="Typing..." />
             </Message>
           )}
@@ -275,6 +275,10 @@ const Chatbot = () => {
       </ToggleButton>
     </>
   );
+};
+
+Chatbot.propTypes = {
+  websiteUrl: PropTypes.string.isRequired,
 };
 
 export default Chatbot;
