@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
@@ -61,20 +61,28 @@ const Answer = styled(animated.div)`
 
 const faqData = [
   {
-    question: "How do I book a photographer on SnapStore?",
-    answer: "To book a photographer, simply search for photographers in your area, view their portfolios, and send a booking request through our platform. Once the photographer accepts, you can finalize the details and make a secure payment."
+    question: "How do I go about booking a professional photographer on SnapStore for my event or personal session?",
+    answer: "To book a photographer, simply search for photographers in your area, view their portfolios, and send a booking request through our platform. Once the photographer accepts, you can finalize the details, such as the location, timing, and specific requirements, and make a secure payment."
   },
   {
-    question: "What types of events can I find photographers for on SnapStore?",
-    answer: "SnapStore offers photographers for a wide range of events, including weddings, corporate events, graduations, birthdays, portrait sessions, and outdoor/nature photography. If you have a specific event in mind, you can easily search for photographers specializing in that area."
+    question: "What range of events can I find photographers for on SnapStore, and how do I know which photographer is right for my occasion?",
+    answer: "SnapStore offers photographers for a wide range of events, including weddings, corporate events, graduations, birthdays, portrait sessions, and outdoor/nature photography. You can filter photographers by their specialties, read reviews, and view sample photos to ensure they’re the right fit for your specific event or session."
   },
   {
-    question: "How does payment work on SnapStore?",
+    question: "Can you explain the payment process on SnapStore, and when am I expected to pay for my photographer booking?",
     answer: "SnapStore uses a secure payment system. When you book a photographer, you'll make an initial deposit to confirm the booking. The remaining balance is typically paid after the event. All payments are processed through our platform to ensure security and transparency for both clients and photographers."
   },
   {
-    question: "Can I communicate with the photographer before booking?",
-    answer: "Yes, SnapStore provides a messaging system that allows you to communicate with photographers before making a booking. This way, you can discuss your needs, ask questions, and ensure the photographer is a good fit for your event."
+    question: "Is it possible to communicate with the photographer before confirming the booking to discuss my event needs?",
+    answer: "Yes, SnapStore provides a built-in messaging system that allows you to communicate directly with photographers before making a booking. You can discuss your needs, ask about availability, clarify pricing, and ensure the photographer understands the details of your event."
+  },
+  {
+    question: "What happens if I need to reschedule my booking with a photographer due to unforeseen circumstances or changes in my plans?",
+    answer: "If you need to reschedule, SnapStore allows you to contact the photographer and discuss the possibility of changing the date. However, keep in mind that rescheduling might depend on the photographer's availability, and it’s best to do so as early as possible to avoid conflicts or cancellation fees."
+  },
+  {
+    question: "How does SnapStore ensure the quality and professionalism of photographers listed on the platform?",
+    answer: "SnapStore carefully vets all photographers to ensure they meet high standards of professionalism and quality. Each photographer must provide a portfolio, client reviews, and meet certain experience requirements before being listed on the platform. You can also review ratings and past work to make an informed decision."
   },
 ];
 
